@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+font-family: Arial;
+font-size: 15px;
+}
+
+a {
+text-decoration: none;
+color: #000000;
+}
+
+a:before {
+font-family: "Font Awesome 5 Free";
+content: "\f00c";
+display: inline-block;
+padding-right: 3px;
+vertical-align: middle;
+font-weight: 900;
+}
+
+#weather-table {
+  display:none;
+  border-collapse: collapse;
+  
+  font-size: 14px;
+  overflow-x:auto;
+
+}
+
+#weather-table th, #weather-table td {
+  text-align: center;
+  padding: 10px;
+}
+
+#weather-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#weather-table tr.header, #weather-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#progress-bar {
+  max-width: 605px;
+  background-color: #fff;
+}
+
+#progress-stats {
+  width: 1%;
+  height: 10px;
+  background-color: DodgerBlue;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 25%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+
+img {
+  max-width: 100%
+}
+
+.icon {
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
