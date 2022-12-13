@@ -120,15 +120,17 @@ const progressBar = (forecast) => {
   var i = 0;
   if (i == 0) {
 	i = 1;		
-	var elem =  document.getElementById('progress-stats');
-	var width = 1;
+	var elem =  document.querySelector('#progress-stats');
+	var width = 1;	
 	var id = setInterval(frame, 1);
-	function frame (){			
+	function frame (){	
+	  elem .style.display = "block"; // show progress bar	
 	  if (width >= 100) {
 		clearInterval(id);
 		i = 0;			
 		weatherTable.style.display = "block";
 		table.innerHTML = ""; // clears table before writing data;
+		elem .style.display = "none"; // hide progress bar	
 		displayTableData(forecast);		
 	  } else {
 		width++;			
