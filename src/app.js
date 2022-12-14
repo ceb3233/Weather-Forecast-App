@@ -9,7 +9,6 @@ const form = document.querySelector("form");
 const numberOfDays = document.querySelector(".number-of-days");
 const weather = document.querySelector("#weather");
 const city = document.querySelector('#city h2');
-const country = document.querySelector('#country h3');
 const weatherIcon = document.querySelector('.weather-icon img');
 const temperature = document.querySelector('.temperature h1');
 const weatherState = document.querySelector('.temperature h2');
@@ -98,8 +97,7 @@ const getWeather = async () =>{
 		const territory = data.location.country;		
 		let forecast = data.forecast;			
 		// add current weather data to the page
-		city.innerText = `${name}, ${provicence}`; 
-		country.innerText = `(${territory})`; 		
+		city.innerText = `${name}, ${provicence} (${territory})`; 			
 		// convert forecast object to an array
 		forecast=Object.entries(forecast);		
 		progressBar(forecast);		
@@ -130,7 +128,7 @@ const progressBar = (forecast) => {
 		i = 0;			
 		weatherTable.style.display = "block";
 		table.innerHTML = ""; // clears table before writing data;
-		elem .style.display = "none"; // hide progress bar	
+		elem.style.display = "none"; // hide progress bar	
 		displayTableData(forecast);		
 	  } else {
 		width++;			
