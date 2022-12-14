@@ -1,14 +1,15 @@
 
-import "./style.css";
+import "./style.css"; // inport stylesheet
 
+//variables use in the application
 const apiKey = process.env.API_SECRET;
 const table = document.querySelector('#weather-table > tbody');
 const weatherTable = document.querySelector('#weather-table');
 const searchBox = document.querySelector(".search-box");
 const form = document.querySelector("form");
 const numberOfDays = document.querySelector(".number-of-days");
-const weather = document.querySelector("#weather");
 const city = document.querySelector('#city h2');
+const weather = document.querySelector("#weather");
 const weatherIcon = document.querySelector('.weather-icon img');
 const temperature = document.querySelector('.temperature h1');
 const weatherState = document.querySelector('.temperature h2');
@@ -16,7 +17,7 @@ const windSpeed = document.querySelector('.wind h1');
 const windDirection = document.querySelector('.wind h2');
 
 /**
- * @description: This function is used to add forecast to data to the page
+ * @description: This function is used to add forecast data to the page
  * @param {string} date - The date of the forecast
  * @param {string} dayOfTheWeek - The day of the week of the forecast
  * @param {string} temperature - The temperature of the forecast
@@ -112,9 +113,10 @@ const getWeather = async () =>{
  * @returns {void}
  */
 const progressBar = (forecast) => {	
-	if(forecast.length == 0){
-		return;
-	}	
+	// guard clause	
+  if(forecast.length == 0){
+	  return;
+  }	
   var i = 0;
   if (i == 0) {
 	i = 1;		
