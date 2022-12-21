@@ -3,6 +3,7 @@ import "./style.css"; // inport stylesheet
 
 //variables use in the application
 const apiKey = process.env.API_SECRET;
+const apiKeyName = process.env.API_SECRET_KEY_NAME;
 const table = document.querySelector('#weather-table > tbody');
 const weatherTable = document.querySelector('#weather-table');
 const searchBox = document.querySelector(".search-box");
@@ -88,7 +89,7 @@ const convertDate = (inputFormat) =>{
  */
 const getWeather = async () =>{
 	try {	
-		const response = await fetch(`http://api.weatherstack.com/forecast?access_key=${apiKey}&query=${searchBox.value}&forecast_days=${numberOfDays.value}&hourly=1`);		
+		const response = await fetch(`http://api.weatherstack.com/forecast?${apiKeyName}=${apiKey}&query=${searchBox.value}&forecast_days=${numberOfDays.value}&hourly=1`);		
 		// guard clause			
 		if(response.status!==200){
 			return console.log(response);
