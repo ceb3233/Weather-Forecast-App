@@ -1,10 +1,12 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 body {
 font-family: Arial;
 font-size: 15px;
+width: 850px;
+margin: auto;
 }
 
 a {
@@ -21,13 +23,17 @@ vertical-align: middle;
 font-weight: 900;
 }
 
+#city{
+  padding-left: 3%;
+}
+
 #weather-table {
   display:none;
-  border-collapse: collapse;
-  
+  border-collapse: collapse;  
   font-size: 14px;
   overflow-x:auto;
-
+  max-width: 645px;
+  margin-left: 13px;
 }
 
 #weather-table th, #weather-table td {
@@ -55,25 +61,50 @@ font-weight: 900;
   background-color: DodgerBlue;
 }
 
+#weather-table > tbody > tr > td
+{  
+  White-space: nowrap;
+}
+
 input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   padding: 10px;
   font-size: 16px;
+  border-radius: 4%;
 }
 
 input[type=text] {
   background-color: #f1f1f1;
-  width: 25%;
+  width: 50%;
+  border-radius: 4%;
 }
 
 input[type=submit] {
   background-color: DodgerBlue;
   color: #fff;
+  border-radius: 4%;
 }
 
 img {
   max-width: 100%
+}
+
+.container {  
+  min-width: 650px;
+  max-width: 650px; 
+  margin-top: 10%;
+  border-radius: 7%;
+  padding: 1%;
+  min-height: 650px; 
+  min-height: 650px;    
+}
+
+.forecast > form:nth-child(2){
+  margin-left: 18%;
+  margin-top: 6%;
+  margin-bottom: 1%;  
+  max-width: 620px;
 }
 
 .icon {
@@ -91,4 +122,75 @@ img {
   align-items: center;
 }
 
+.tooltip.tooltiptext{
+  width: 160px;
+  bottom:80%;
+  left:40%;
+  margin-left: 80px;
+  }
 
+
+
+/*******************/
+
+
+/*******************/
+
+
+  
+
+@media screen and (max-width: 600px) {
+  body {    
+    font-size: x-small;
+  }
+
+  .city{
+    font-size: x-small;
+    padding-left: 9%;
+    max-width: 650px;
+    text-align: center;
+  }
+
+  .text{
+    font-size: x-small;
+  }
+
+  .forecast > form:nth-child(2){
+    margin-left: 0%;
+    margin-top: 6%;
+    margin-bottom: 1%;
+    max-width: 620px;
+  }
+  
+  input[type="text"] {
+    width: 42%;
+    margin-left: 13px;
+    border-radius: 4%;
+  }
+
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4%;
+  }  
+
+  #weather-table {
+    display: none;
+    border-collapse: collapse;
+    font-size: 14px;
+    overflow: auto;
+    max-width: 450px;
+    margin-left: 13px;
+    padding: 0px;
+  
+  }
+
+  #weather-table th, #weather-table td {
+    text-align: center;
+    padding: 4px;
+    White-space: nowrap;
+    font-size: x-small;
+  }
+}

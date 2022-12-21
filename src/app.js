@@ -7,6 +7,7 @@ const table = document.querySelector('#weather-table > tbody');
 const weatherTable = document.querySelector('#weather-table');
 const searchBox = document.querySelector(".search-box");
 const form = document.querySelector("form");
+const containerElm = document.querySelector(".container");
 const numberOfDays = document.querySelector(".number-of-days");
 const city = document.querySelector('#city h2');
 const weather = document.querySelector("#weather");
@@ -128,7 +129,7 @@ const progressBar = (forecast) => {
 	  if (width >= 100) {
 		clearInterval(id);
 		i = 0;			
-		weatherTable.style.display = "block";
+		weatherTable.style.display = "block";		
 		table.innerHTML = ""; // clears table before writing data;
 		elem.style.display = "none"; // hide progress bar	
 		displayTableData(forecast);		
@@ -150,7 +151,7 @@ const displayTableData = (forecast) =>{
 	forecast.forEach(day => {				
 		const dayOfTheWeek = getDayOfTheWeek(day[1].date_epoch);
 		const date = convertDate(day[1].date);	
-		const temperature = convertToF(day[1].avgtemp);                   
+		const temperature = convertToF(day[1].avgtemp) + " / " + day[1].avgtemp +" &deg; C"; // temp in F & C                  
 		const weatherState = day[1].hourly[0].weather_descriptions[0];		
 		const weatherIcon = day[1].hourly[0].weather_icons[0];		
 		const windSpeed = day[1].hourly[0].wind_speed;		
