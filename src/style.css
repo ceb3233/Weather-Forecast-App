@@ -130,16 +130,7 @@ img {
   }
 
 
-
-/*******************/
-
-
-/*******************/
-
-
-  
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   body {    
     font-size: x-small;
   }
@@ -155,12 +146,6 @@ img {
     font-size: x-small;
   }
 
-  .forecast > form:nth-child(2){
-    margin-left: 0%;
-    margin-top: 6%;
-    margin-bottom: 1%;
-    max-width: 620px;
-  }
   
   input[type="text"] {
     width: 42%;
@@ -182,7 +167,7 @@ img {
     font-size: 14px;
     overflow: auto;
     max-width: 450px;
-    margin-left: 13px;
+    margin-left: 20%;
     padding: 0px;
   
   }
@@ -193,4 +178,94 @@ img {
     White-space: nowrap;
     font-size: x-small;
   }
+
+    
+  .container {     
+    margin-top: 10%;
+    border-radius: 7%;
+    padding: 1%;
+    min-height: 650px; 
+    margin-left: 7%; 
+    min-width: 800px;
+    max-width: 800px;
+  }
+
 }
+
+   
+
+@media screen and (max-width: 420px) {
+  body {    
+    font-size: xx-small;
+  }
+
+  .city{
+    font-size: xx-small;
+    padding-left: 9%;
+    min-width: 300px;
+    max-width: 360px; 
+    text-align: center;
+  }
+
+  .text{
+    font-size: xx-small;
+  }
+
+  .forecast > form:nth-child(2){
+    margin-left: 10%;
+    margin-top: 6%;
+    margin-bottom: 1%;  
+    min-width: 300px;
+    max-width: 360px; 
+  }
+  
+  input[type="text"] {
+    width: 42%;
+    margin-left: 13px;
+    border-radius: 4%;
+  }
+
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4%;
+  }  
+
+  #city{
+    padding-left: 0px;;
+  }
+
+  #weather-table {
+    display: none;
+    border-collapse: collapse;
+    font-size: 14px;
+    overflow: auto;
+    min-width: 300px;
+    max-width: 360px; 
+    margin-left: 13px;
+    padding: 0px;
+  
+  }
+
+  #weather-table th, #weather-table td {
+    text-align: center;
+    padding: 4px;
+    White-space: nowrap;
+    font-size: xx-small;
+  }
+
+    
+  .container {  
+    min-width: 300px;
+    max-width: 360px; 
+    margin-top: 10%;
+    border-radius: 7%;
+    padding: 1%;
+    min-height: 650px;
+    margin-left: 2%;       
+  }
+
+}
+
