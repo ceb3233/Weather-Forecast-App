@@ -3,25 +3,25 @@
   "version": "1.0.0",
   "description": "A web app that allows users to view the 7-day forecast for any user-specified location in the world.",
   "main": "./src/app.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "serve": "webpack-dev-server --mode=development",
     "deploy": "npm run build"
   },
-  "repository":{
-      "type": "git",
-      "url": "git+https://github.com/ceb3233/Weather-Forecast-App.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceb3233/Weather-Forecast-App.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",
     "dotenv-webpack": "^8.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest-environment-jsdom": "^29.3.1",
+    "jsdom": "^20.0.3",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
@@ -29,5 +29,17 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.3.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
   }
-} 
+}

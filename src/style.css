@@ -134,6 +134,16 @@ img {
   body {    
     font-size: x-small;
   }
+      
+  .container {     
+    margin-top: 10%;
+    border-radius: 7%;
+    padding: 1%;
+    min-height: 650px; 
+    margin-left: 7%; 
+    min-width: 800px;
+    max-width: 800px;
+  }
 
   .city{
     font-size: x-small;
@@ -145,7 +155,6 @@ img {
   .text{
     font-size: x-small;
   }
-
   
   input[type="text"] {
     width: 42%;
@@ -168,8 +177,7 @@ img {
     overflow: auto;
     max-width: 450px;
     margin-left: 20%;
-    padding: 0px;
-  
+    padding: 0px;  
   }
 
   #weather-table th, #weather-table td {
@@ -178,25 +186,22 @@ img {
     White-space: nowrap;
     font-size: x-small;
   }
-
-    
-  .container {     
-    margin-top: 10%;
-    border-radius: 7%;
-    padding: 1%;
-    min-height: 650px; 
-    margin-left: 7%; 
-    min-width: 800px;
-    max-width: 800px;
-  }
-
 }
-
    
 
 @media screen and (max-width: 420px) {
   body {    
     font-size: xx-small;
+  }
+     
+  .container {  
+    min-width: 300px;
+    max-width: 360px; 
+    margin-top: 10%;
+    border-radius: 7%;
+    padding: 1%;
+    min-height: 650px;
+    margin-left: 2%;       
   }
 
   .city{
@@ -245,8 +250,7 @@ img {
     min-width: 300px;
     max-width: 360px; 
     margin-left: 13px;
-    padding: 0px;
-  
+    padding: 0px;  
   }
 
   #weather-table th, #weather-table td {
@@ -255,17 +259,5 @@ img {
     White-space: nowrap;
     font-size: xx-small;
   }
-
-    
-  .container {  
-    min-width: 300px;
-    max-width: 360px; 
-    margin-top: 10%;
-    border-radius: 7%;
-    padding: 1%;
-    min-height: 650px;
-    margin-left: 2%;       
-  }
-
 }
 
